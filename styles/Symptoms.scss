@@ -1,0 +1,82 @@
+.symptom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__state--not_selected {
+    background-color: #f0f0f0;
+  }
+
+  &__state--maybe {
+    background-color: #ffe066;
+  }
+
+  &__state--yes {
+    background-color: #28a745;
+  }
+
+  &__state--no {
+    background-color: #dc3545;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &--maybe {
+      background-color: #ffe066;
+      color: #333;
+
+      &:hover {
+        background-color: #ffd633;
+      }
+    }
+
+    &--yes {
+      background-color: #28a745;
+      color: white;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+
+    &--no {
+      background-color: #dc3545;
+      color: white;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+
+    &--remove {
+      background-color: #6c757d;
+      color: white;
+
+      &:hover {
+        background-color: #5a6268;
+      }
+    }
+  }
+}

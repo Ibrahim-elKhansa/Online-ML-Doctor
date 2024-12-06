@@ -1,0 +1,21 @@
+@use "./SymptomsForm";
+@use "./Symptoms";
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #640D5F;
+}
+
+body {
+  width: 60%;
+  font-family: var(--font-roboto), sans-serif;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: #D91656;
+  color: #ffffff;
+  box-shadow: inset 0px 4px 12px black;
+}
