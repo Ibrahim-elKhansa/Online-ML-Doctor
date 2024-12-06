@@ -1,8 +1,11 @@
 .form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 20px;
+  width: 95%;
 
   &__symptoms-selector {
     display: flex;
@@ -17,6 +20,10 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  &__unselected-symptoms {
     max-height: 400px;
     overflow-y: scroll;
   }
@@ -29,7 +36,7 @@
   }
 
   &__search-bar {
-    width: 90%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -45,16 +52,17 @@
   &__submit {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #6adb84;
+    background-color: #14cf7b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%;
   }
   
   &__submit:hover {
-    background-color: #9ee2ae;
+    background-color: #00be69;
   }
   
   &__response {
@@ -66,7 +74,24 @@
     white-space: pre-wrap;
     font-family: monospace;
     font-size: 14px;
+    width: 100%;
     color: black
   }
+
+  &__prognoses {
+    width: 100%;
+  }
+
+  &__next-symptom {
+    width: 100%;
+  }
   
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    &__unselected-symptoms,
+    &__selected-symptoms {
+      width: 100%;
+    }
+  }
 }

@@ -19,11 +19,11 @@
   }
 
   &__state--maybe {
-    background-color: #ffe066;
+    background-color: #ddc513;
   }
 
   &__state--yes {
-    background-color: #28a745;
+    background-color: #14cf7b;
   }
 
   &__state--no {
@@ -44,20 +44,20 @@
     transition: background-color 0.2s ease;
 
     &--maybe {
-      background-color: #ffe066;
-      color: #333;
+      background-color: #ddc513;
+      color: white;
 
       &:hover {
-        background-color: #ffd633;
+        background-color: #ccb612;
       }
     }
 
     &--yes {
-      background-color: #28a745;
+      background-color: #14cf7b;
       color: white;
 
       &:hover {
-        background-color: #218838;
+        background-color: #00be69;
       }
     }
 
@@ -78,5 +78,10 @@
         background-color: #5a6268;
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px
   }
 }

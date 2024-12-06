@@ -18,4 +18,20 @@ body {
   background-color: #D91656;
   color: #ffffff;
   box-shadow: inset 0px 4px 12px black;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    padding: 0px 20px;
+  }
 }
