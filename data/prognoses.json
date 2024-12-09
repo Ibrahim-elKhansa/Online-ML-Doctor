@@ -1,0 +1,248 @@
+{
+  "Fungal infection": {
+    "severity": "Moderate",
+    "description": "A fungal infection occurs when fungi invade a part of the body and cause an infection. Examples include athlete's foot, ringworm, and thrush.",
+    "medications": ["Antifungal creams", "Oral antifungal medications", "Topical sprays"],
+    "remedies": ["Keep the affected area clean and dry", "Avoid tight-fitting clothes", "Use antifungal powders"]
+  },
+  "Allergy": {
+    "severity": "Mild to Severe",
+    "description": "An allergy occurs when the immune system reacts abnormally to a foreign substance such as pollen, pet dander, or certain foods.",
+    "medications": ["Antihistamines", "Decongestants", "Epinephrine (for severe reactions)"],
+    "remedies": ["Avoid allergens", "Use air purifiers", "Rinse nasal passages with saline"]
+  },
+  "GERD": {
+    "severity": "Moderate to Severe",
+    "description": "Gastroesophageal reflux disease (GERD) is a chronic condition where stomach acid flows back into the esophagus, causing discomfort.",
+    "medications": ["Antacids", "Proton pump inhibitors (PPIs)", "H2 receptor blockers"],
+    "remedies": ["Avoid spicy foods", "Eat smaller meals", "Elevate the head while sleeping"]
+  },
+  "Chronic cholestasis": {
+    "severity": "Severe",
+    "description": "A condition in which bile flow from the liver is reduced or blocked, leading to liver and digestive issues.",
+    "medications": ["Ursodeoxycholic acid", "Cholestyramine"],
+    "remedies": ["Low-fat diet", "Avoid alcohol", "Stay hydrated"]
+  },
+  "Drug Reaction": {
+    "severity": "Mild to Severe",
+    "description": "Adverse reactions to medications, ranging from mild rashes to severe allergic responses.",
+    "medications": ["Antihistamines", "Corticosteroids"],
+    "remedies": ["Stop the offending drug (consult doctor)", "Apply soothing creams for skin reactions"]
+  },
+  "Peptic ulcer disease": {
+    "severity": "Moderate",
+    "description": "Sores in the lining of the stomach or the first part of the small intestine.",
+    "medications": ["Proton pump inhibitors", "H2 blockers", "Antibiotics (if caused by H. pylori)"],
+    "remedies": ["Avoid NSAIDs", "Reduce stress", "Limit caffeine and alcohol"]
+  },
+  "AIDS": {
+    "severity": "Severe",
+    "description": "Acquired immunodeficiency syndrome (AIDS) is a chronic condition caused by HIV, weakening the immune system.",
+    "medications": ["Antiretroviral therapy (ART)"],
+    "remedies": ["Maintain a healthy diet", "Practice safe behaviors", "Regular medical check-ups"]
+  },
+  "Diabetes": {
+    "severity": "Chronic",
+    "description": "A metabolic disorder characterized by high blood sugar levels over a prolonged period.",
+    "medications": ["Insulin", "Metformin", "Sulfonylureas"],
+    "remedies": ["Regular exercise", "Healthy diet", "Monitor blood sugar levels"]
+  },
+  "Gastroenteritis": {
+    "severity": "Mild to Moderate",
+    "description": "Inflammation of the stomach and intestines, often causing diarrhea, nausea, and vomiting.",
+    "medications": ["Oral rehydration salts", "Antiemetics", "Probiotics"],
+    "remedies": ["Stay hydrated", "Eat bland foods", "Avoid caffeine and alcohol"]
+  },
+  "Bronchial Asthma": {
+    "severity": "Moderate to Severe",
+    "description": "A chronic inflammatory disease of the airways causing breathing difficulties.",
+    "medications": ["Bronchodilators", "Inhaled corticosteroids", "Leukotriene modifiers"],
+    "remedies": ["Avoid allergens", "Use a peak flow meter", "Practice breathing exercises"]
+  },
+  "Hypertension": {
+    "severity": "Chronic",
+    "description": "A condition in which the force of the blood against the artery walls is too high.",
+    "medications": ["ACE inhibitors", "Beta-blockers", "Calcium channel blockers"],
+    "remedies": ["Reduce sodium intake", "Exercise regularly", "Manage stress"]
+  },
+  "Migraine": {
+    "severity": "Moderate to Severe",
+    "description": "A neurological condition characterized by intense headaches, often accompanied by nausea and sensitivity to light.",
+    "medications": ["Triptans", "NSAIDs", "Beta-blockers (preventive)"],
+    "remedies": ["Avoid triggers", "Practice relaxation techniques", "Maintain a regular sleep schedule"]
+  },
+  "Cervical spondylosis": {
+    "severity": "Moderate",
+    "description": "Age-related wear and tear affecting the spinal disks in the neck.",
+    "medications": ["Pain relievers", "Muscle relaxants"],
+    "remedies": ["Physical therapy", "Neck exercises", "Use ergonomic pillows"]
+  },
+  "Paralysis (brain hemorrhage)": {
+    "severity": "Severe",
+    "description": "Loss of muscle function in part of the body due to a brain hemorrhage.",
+    "medications": ["Blood pressure medications", "Anticoagulants"],
+    "remedies": ["Rehabilitation therapy", "Surgery (in severe cases)", "Healthy lifestyle changes"]
+  },
+  "Jaundice": {
+    "severity": "Moderate",
+    "description": "Yellowing of the skin and eyes due to high bilirubin levels.",
+    "medications": ["Cholestyramine", "Antivirals (if caused by hepatitis)"],
+    "remedies": ["Stay hydrated", "Avoid alcohol", "Consume balanced meals"]
+  },
+  "Malaria": {
+    "severity": "Severe",
+    "description": "A mosquito-borne infectious disease caused by Plasmodium parasites.",
+    "medications": ["Chloroquine", "Artemisinin-based combination therapies (ACTs)"],
+    "remedies": ["Use mosquito nets", "Avoid stagnant water", "Take preventive medications if traveling"]
+  },
+  "Chicken pox": {
+    "severity": "Mild",
+    "description": "A highly contagious viral infection causing an itchy rash and blisters.",
+    "medications": ["Antihistamines", "Antiviral medications (e.g., acyclovir)"],
+    "remedies": ["Stay hydrated", "Use calamine lotion", "Avoid scratching the blisters"]
+  },
+    "Dengue": {
+      "severity": "Severe",
+      "description": "A mosquito-borne viral infection causing high fever, severe headaches, and joint pains.",
+      "medications": ["Paracetamol (for fever)", "Pain relievers (avoid NSAIDs)"],
+      "remedies": ["Stay hydrated", "Rest", "Avoid mosquito bites"]
+    },
+    "Typhoid": {
+      "severity": "Severe",
+      "description": "A bacterial infection spread through contaminated food and water.",
+      "medications": ["Antibiotics (e.g., ciprofloxacin, azithromycin)"],
+      "remedies": ["Consume easily digestible foods", "Stay hydrated", "Maintain good hygiene"]
+    },
+    "hepatitis A": {
+      "severity": "Mild",
+      "description": "A viral liver infection caused by consuming contaminated food or water.",
+      "medications": ["Supportive care", "Pain relievers (avoid NSAIDs)"],
+      "remedies": ["Rest", "Avoid alcohol", "Consume a balanced diet"]
+    },
+    "Hepatitis B": {
+      "severity": "Moderate to Severe",
+      "description": "A viral infection causing liver inflammation, spread through blood or bodily fluids.",
+      "medications": ["Antiviral medications (e.g., tenofovir, entecavir)"],
+      "remedies": ["Avoid alcohol", "Get vaccinated", "Practice safe behaviors"]
+    },
+    "Hepatitis C": {
+      "severity": "Severe",
+      "description": "A viral infection that can cause chronic liver disease, spread through infected blood.",
+      "medications": ["Antiviral medications (e.g., sofosbuvir, ledipasvir)"],
+      "remedies": ["Avoid alcohol", "Healthy diet", "Regular medical check-ups"]
+    },
+    "Hepatitis D": {
+      "severity": "Severe",
+      "description": "A liver infection that occurs in conjunction with hepatitis B.",
+      "medications": ["Interferon-alpha"],
+      "remedies": ["Avoid alcohol", "Get vaccinated for hepatitis B", "Regular check-ups"]
+    },
+    "Hepatitis E": {
+      "severity": "Mild to Moderate",
+      "description": "A liver infection spread through contaminated water, typically self-resolving.",
+      "medications": ["Supportive care"],
+      "remedies": ["Rest", "Hydration", "Avoid fatty foods"]
+    },
+    "Alcoholic hepatitis": {
+      "severity": "Severe",
+      "description": "Liver inflammation caused by excessive alcohol consumption.",
+      "medications": ["Corticosteroids", "Vitamin supplements (e.g., thiamine)"],
+      "remedies": ["Abstain from alcohol", "Balanced diet", "Manage complications through medical care"]
+    },
+    "Tuberculosis": {
+      "severity": "Severe",
+      "description": "A bacterial infection primarily affecting the lungs, caused by Mycobacterium tuberculosis.",
+      "medications": ["Isoniazid", "Rifampin", "Pyrazinamide"],
+      "remedies": ["Complete the prescribed treatment", "Maintain good nutrition", "Avoid crowded areas"]
+    },
+    "Common Cold": {
+      "severity": "Mild",
+      "description": "A viral infection affecting the nose and throat.",
+      "medications": ["Decongestants", "Cough syrups", "Pain relievers"],
+      "remedies": ["Stay hydrated", "Rest", "Use saline nasal sprays"]
+    },
+    "Pneumonia": {
+      "severity": "Severe",
+      "description": "An infection causing inflammation of the air sacs in the lungs.",
+      "medications": ["Antibiotics (if bacterial)", "Antiviral medications (if viral)"],
+      "remedies": ["Use humidifiers", "Rest", "Stay hydrated"]
+    },
+    "Dimorphic hemmorhoids(piles)": {
+      "severity": "Mild to Moderate",
+      "description": "Swollen and inflamed veins in the rectum or anus causing discomfort.",
+      "medications": ["Over-the-counter creams", "Pain relievers", "Laxatives (if constipated)"],
+      "remedies": ["Consume a high-fiber diet", "Avoid straining during bowel movements", "Stay hydrated"]
+    },
+    "Heart attack": {
+      "severity": "Critical",
+      "description": "A medical emergency caused by a blockage in the blood flow to the heart.",
+      "medications": ["Aspirin", "Nitroglycerin", "Beta-blockers"],
+      "remedies": ["Emergency medical care", "Maintain a heart-healthy diet", "Exercise regularly after recovery"]
+    },
+    "Varicose veins": {
+      "severity": "Mild",
+      "description": "Twisted, enlarged veins often appearing on the legs.",
+      "medications": ["Compression stockings", "Pain relievers"],
+      "remedies": ["Elevate legs", "Regular exercise", "Avoid prolonged sitting or standing"]
+    },
+    "Hypothyroidism": {
+      "severity": "Chronic",
+      "description": "A condition in which the thyroid gland doesn't produce enough hormones.",
+      "medications": ["Levothyroxine"],
+      "remedies": ["Regular exercise", "Balanced diet", "Avoid excessive iodine intake"]
+    },
+    "Hyperthyroidism": {
+      "severity": "Moderate to Severe",
+      "description": "A condition in which the thyroid gland produces too much hormone.",
+      "medications": ["Beta-blockers", "Antithyroid medications (e.g., methimazole)"],
+      "remedies": ["Avoid caffeine", "Consume a balanced diet", "Regular thyroid check-ups"]
+    },
+    "Hypoglycemia": {
+      "severity": "Severe",
+      "description": "Low blood sugar levels causing shakiness, confusion, and dizziness.",
+      "medications": ["Glucose tablets", "Glucagon injections"],
+      "remedies": ["Eat small, frequent meals", "Avoid skipping meals", "Carry a source of sugar"]
+    },
+    "Osteoarthritis": {
+      "severity": "Chronic",
+      "description": "A degenerative joint disease causing pain and stiffness.",
+      "medications": ["Pain relievers (e.g., acetaminophen)", "Nonsteroidal anti-inflammatory drugs (NSAIDs)"],
+      "remedies": ["Physical therapy", "Maintain a healthy weight", "Exercise regularly"]
+    },
+    "Arthritis": {
+      "severity": "Chronic",
+      "description": "Inflammation of one or more joints causing pain and stiffness.",
+      "medications": ["Pain relievers", "Disease-modifying antirheumatic drugs (DMARDs)"],
+      "remedies": ["Low-impact exercise", "Hot and cold therapy", "Maintain a healthy weight"]
+    },
+    "(vertigo) Paroymsal Positional Vertigo": {
+      "severity": "Mild",
+      "description": "A sudden sensation of spinning or dizziness caused by head movement.",
+      "medications": ["Meclizine", "Antihistamines"],
+      "remedies": ["Epley maneuver (repositioning techniques)", "Avoid sudden head movements"]
+    },
+    "Acne": {
+      "severity": "Mild to Moderate",
+      "description": "A common skin condition caused by clogged hair follicles and excess oil production.",
+      "medications": ["Benzoyl peroxide", "Salicylic acid", "Topical retinoids"],
+      "remedies": ["Wash face regularly", "Avoid touching the face", "Use oil-free cosmetics"]
+    },
+    "Urinary tract infection": {
+      "severity": "Mild to Moderate",
+      "description": "An infection in any part of the urinary system, often causing pain during urination.",
+      "medications": ["Antibiotics (e.g., amoxicillin, ciprofloxacin)"],
+      "remedies": ["Drink plenty of water", "Urinate frequently", "Avoid irritants like caffeine and alcohol"]
+    },
+    "Psoriasis": {
+      "severity": "Chronic",
+      "description": "An autoimmune skin condition causing red, scaly patches.",
+      "medications": ["Topical corticosteroids", "Vitamin D analogs", "Biologic drugs"],
+      "remedies": ["Moisturize skin regularly", "Avoid triggers like stress", "Use medicated shampoos (for scalp psoriasis)"]
+    },
+    "Impetigo": {
+      "severity": "Mild",
+      "description": "A highly contagious bacterial skin infection causing red sores.",
+      "medications": ["Antibiotic creams", "Oral antibiotics"],
+      "remedies": ["Wash affected areas", "Keep nails short", "Avoid sharing personal items"]
+    }
+  }

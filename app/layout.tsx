@@ -9,8 +9,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Online Doctor",
-  description: "Interactive diagnosis application",
+  title: "HADI",
+  description: "Health and Disease Identification",
 };
 
 export default function RootLayout({

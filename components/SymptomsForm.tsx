@@ -5,6 +5,16 @@ import Symptom from "./Symptom";
 import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
 
+interface PrognosisDetails {
+  severity: string;
+  description: string;
+  medications: string[];
+  remedies: string[];
+}
+
+const prognosesData: Record<string, PrognosisDetails> = require("../data/prognoses.json");
+
+
 const symptomsList = [
   "itching",
   "skin_rash",
@@ -157,7 +167,7 @@ export default function SymptomsForm() {
     const confidentPrognosis = prognoses.find((prog) => parseFloat(prog.confidence) > 95);
     if (confidentPrognosis) {
       setFinalPrognosis(confidentPrognosis.prognosis);
-      setNextSymptom(null); // Remove the next question
+      setNextSymptom(null);
     }
   }, [prognoses]);
 
@@ -204,7 +214,6 @@ export default function SymptomsForm() {
       return acc;
     }, {} as Record<string, number>);
 
-    // Clear previous results and show loading spinner
     setPrognoses([]);
     setFinalPrognosis(null);
     setNextSymptom(null);
@@ -277,9 +286,15 @@ export default function SymptomsForm() {
       </button>
       {finalPrognosis ? (
         <div className="form__final-prognosis">
-          <h3>Final Prognosis: {finalPrognosis}</h3>
-          <p>Confidence: {prognoses.find((prog) => prog.prognosis === finalPrognosis)?.confidence}%</p>
+        <h3>Final Prognosis: {finalPrognosis}</h3>
+        <p>Confidence: {prognoses.find((prog) => prog.prognosis === finalPrognosis)?.confidence}</p>
+        <div className="form__prognosis-details">
+          <p><strong>Severity:</strong> {prognosesData[finalPrognosis]?.severity}</p>
+          <p><strong>Description:</strong> {prognosesData[finalPrognosis]?.description}</p>
+          <p><strong>Medications:</strong> {prognosesData[finalPrognosis]?.medications?.join(", ")}</p>
+          <p><strong>Remedies:</strong> {prognosesData[finalPrognosis]?.remedies?.join(", ")}</p>
         </div>
+      </div>
       ) : (
         nextSymptom && (
           <div className="form__next-symptom">

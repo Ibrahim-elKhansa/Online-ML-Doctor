@@ -6,7 +6,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #640D5F;
+  background-color: #ff0000;
 }
 
 body {
@@ -15,8 +15,8 @@ body {
   margin: 1rem;
   padding: 2rem;
   border-radius: 2rem;
-  background-color: #D91656;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   box-shadow: inset 0px 4px 12px black;
 
   @media (max-width: 768px) {
@@ -33,5 +33,12 @@ body {
 
   &__title {
     padding: 0px 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    &__image-container {
+      display: none;
+    }
   }
 }
