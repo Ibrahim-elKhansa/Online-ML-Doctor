@@ -41,7 +41,7 @@
     "medications": ["Antiretroviral therapy (ART)"],
     "remedies": ["Maintain a healthy diet", "Practice safe behaviors", "Regular medical check-ups"]
   },
-  "Diabetes": {
+  "Diabetes ": {
     "severity": "Chronic",
     "description": "A metabolic disorder characterized by high blood sugar levels over a prolonged period.",
     "medications": ["Insulin", "Metformin", "Sulfonylureas"],
