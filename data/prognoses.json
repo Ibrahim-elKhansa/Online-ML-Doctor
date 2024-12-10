@@ -29,7 +29,7 @@
     "medications": ["Antihistamines", "Corticosteroids"],
     "remedies": ["Stop the offending drug (consult doctor)", "Apply soothing creams for skin reactions"]
   },
-  "Peptic ulcer disease": {
+  "Peptic ulcer diseae": {
     "severity": "Moderate",
     "description": "Sores in the lining of the stomach or the first part of the small intestine.",
     "medications": ["Proton pump inhibitors", "H2 blockers", "Antibiotics (if caused by H. pylori)"],
