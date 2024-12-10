@@ -59,7 +59,7 @@
     "medications": ["Bronchodilators", "Inhaled corticosteroids", "Leukotriene modifiers"],
     "remedies": ["Avoid allergens", "Use a peak flow meter", "Practice breathing exercises"]
   },
-  "Hypertension": {
+  "Hypertension ": {
     "severity": "Chronic",
     "description": "A condition in which the force of the blood against the artery walls is too high.",
     "medications": ["ACE inhibitors", "Beta-blockers", "Calcium channel blockers"],
