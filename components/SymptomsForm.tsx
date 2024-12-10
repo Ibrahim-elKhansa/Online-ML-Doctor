@@ -148,7 +148,7 @@ const symptomsList = [
   "yellow_crust_ooze",
 ].sort((a, b) => a.localeCompare(b));
 
-const confidenceLevel = 60;
+const confidenceLevel = 95;
 
 export default function SymptomsForm() {
   const [selectedSymptoms, setSelectedSymptoms] = useState<{ name: string; state: "maybe" | "yes" | "no" }[]>([]);
@@ -169,8 +169,7 @@ export default function SymptomsForm() {
   useEffect(() => {
     const confidentPrognosis = prognoses.find((prog) => parseFloat(prog.confidence) > confidenceLevel);
     if (confidentPrognosis) {
-      setFinalPrognosis(confidentPrognosis.prognosis);
-      setNextSymptom(null);
+      handleConfirm(confidentPrognosis.prognosis);
     }
   }, [prognoses]);
 
@@ -211,6 +210,11 @@ export default function SymptomsForm() {
     setSelectedSymptoms((prev) => prev.filter((symptom) => symptom.name !== name));
   };
 
+  const handleConfirm = (prognosis: string) => {
+    setFinalPrognosis(prognosis);
+    setNextSymptom(null);
+  }
+
   const handleSubmit = async () => {
     const payload = selectedSymptoms.reduce((acc, symptom) => {
       acc[symptom.name] = symptom.state === "yes" ? 2 : symptom.state === "maybe" ? 1 : 0;
@@ -229,7 +233,7 @@ export default function SymptomsForm() {
     } catch (error) {
       console.error("Error submitting symptoms:", error);
     } finally {
-      setLoading(false); // Hide loading spinner
+      setLoading(false);
     }
   };
 
@@ -356,7 +360,7 @@ export default function SymptomsForm() {
           <h2>Prognoses</h2>
           {prognoses.map((prog) => (
             <div key={prog.prognosis} className="prognosis">
-              <h3>{prog.prognosis}</h3>
+              <h3>{prog.prognosis} <button className="form__confirm-button" onClick={() => handleConfirm(prog.prognosis)}>Confirm</button></h3>
               <p>Confidence: {prog.confidence}</p>
             </div>
           ))}
