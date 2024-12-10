@@ -14,7 +14,6 @@ interface PrognosisDetails {
 
 const prognosesData: Record<string, PrognosisDetails> = require("../data/prognoses.json");
 
-
 const symptomsList = [
   "itching",
   "skin_rash",
@@ -156,6 +155,8 @@ export default function SymptomsForm() {
   const [nextSymptom, setNextSymptom] = useState<string | null>(null);
   const [finalPrognosis, setFinalPrognosis] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [medicationPrices, setMedicationPrices] = useState<{ name: string; type: string; price: string }[]>([]);
+  const [checkingPrices, setCheckingPrices] = useState(false);
 
   useEffect(() => {
     if (nextSymptom && selectedSymptoms.some((s) => s.name === nextSymptom)) {
@@ -233,12 +234,27 @@ export default function SymptomsForm() {
   const filteredSymptoms = symptomsList.filter((symptom) => {
     const normalizedSymptom = symptom.toLowerCase().replaceAll(" ", "").replaceAll("_", "");
     const normalizedSearchTerm = searchTerm.toLowerCase().replaceAll(" ", "").replaceAll("_", "");
-    return (
-      !selectedSymptoms.some((s) => s.name === symptom) &&
-      normalizedSymptom.includes(normalizedSearchTerm)
-    );
+    return !selectedSymptoms.some((s) => s.name === symptom) && normalizedSymptom.includes(normalizedSearchTerm);
   });
-  
+
+  const handleCheckPrices = async () => {
+    if (!finalPrognosis || !prognosesData[finalPrognosis]?.medications) return;
+
+    const medications = prognosesData[finalPrognosis].medications;
+    setCheckingPrices(true);
+    setMedicationPrices([]);
+
+    try {
+      const response = await axios.post("/api/check-prices", { medications });
+
+      const pricesData = response.data.prices || [];
+      setMedicationPrices(pricesData);
+    } catch (error) {
+      console.error("Error fetching prices:", error);
+    } finally {
+      setCheckingPrices(false);
+    }
+  };
 
   return (
     <div className="form">
@@ -286,15 +302,38 @@ export default function SymptomsForm() {
       </button>
       {finalPrognosis ? (
         <div className="form__final-prognosis">
-        <h3>Final Prognosis: {finalPrognosis}</h3>
-        <p>Confidence: {prognoses.find((prog) => prog.prognosis === finalPrognosis)?.confidence}</p>
-        <div className="form__prognosis-details">
-          <p><strong>Severity:</strong> {prognosesData[finalPrognosis]?.severity}</p>
-          <p><strong>Description:</strong> {prognosesData[finalPrognosis]?.description}</p>
-          <p><strong>Medications:</strong> {prognosesData[finalPrognosis]?.medications?.join(", ")}</p>
-          <p><strong>Remedies:</strong> {prognosesData[finalPrognosis]?.remedies?.join(", ")}</p>
+          <h3>Final Prognosis: {finalPrognosis}</h3>
+          <p>Confidence: {prognoses.find((prog) => prog.prognosis === finalPrognosis)?.confidence}</p>
+          <div className="form__prognosis-details">
+            <p>
+              <strong>Severity:</strong> {prognosesData[finalPrognosis]?.severity}
+            </p>
+            <p>
+              <strong>Description:</strong> {prognosesData[finalPrognosis]?.description}
+            </p>
+            <p>
+              <strong>Medications:</strong> {prognosesData[finalPrognosis]?.medications?.join(", ")}
+            </p>
+            <p>
+              <strong>Remedies:</strong> {prognosesData[finalPrognosis]?.remedies?.join(", ")}
+            </p>
+          </div>
+          <button className="form__check-prices" onClick={handleCheckPrices} disabled={checkingPrices}>
+            {checkingPrices ? <CircularProgress size={16} color="inherit" /> : "Check for Prices"}
+          </button>
+          {medicationPrices && medicationPrices.length > 0 && (
+            <div className="form__prices">
+              <h4>Medication Prices:</h4>
+              <ul>
+                {medicationPrices.map((med: { name: string; type: string; price: string }) => (
+                  <li key={med.name}>
+                    <strong>{med.name}</strong> ({med.type}): {med.price}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
-      </div>
       ) : (
         nextSymptom && (
           <div className="form__next-symptom">
