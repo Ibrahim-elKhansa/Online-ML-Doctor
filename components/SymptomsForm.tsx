@@ -148,6 +148,8 @@ const symptomsList = [
   "yellow_crust_ooze",
 ].sort((a, b) => a.localeCompare(b));
 
+const confidenceLevel = 60;
+
 export default function SymptomsForm() {
   const [selectedSymptoms, setSelectedSymptoms] = useState<{ name: string; state: "maybe" | "yes" | "no" }[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -165,7 +167,7 @@ export default function SymptomsForm() {
   }, [nextSymptom, selectedSymptoms]);
 
   useEffect(() => {
-    const confidentPrognosis = prognoses.find((prog) => parseFloat(prog.confidence) > 95);
+    const confidentPrognosis = prognoses.find((prog) => parseFloat(prog.confidence) > confidenceLevel);
     if (confidentPrognosis) {
       setFinalPrognosis(confidentPrognosis.prognosis);
       setNextSymptom(null);
