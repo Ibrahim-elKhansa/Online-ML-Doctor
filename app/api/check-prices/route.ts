@@ -25,7 +25,9 @@ export async function POST(req: Request) {
   }
 ]
 Here are the medications:
-${body.medications.join("\n")}`;
+${body.medications.join("\n")}
+and here is the link of the national drugs database in lebanon, use it please to get the prices: https://www.moph.gov.lb/en/Drugs/index/3/4848/lebanon-national-drugs-database
+`;
 
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
