@@ -308,7 +308,7 @@ export default function SymptomsForm() {
       </button>
       {finalPrognosis ? (
         <div className="form__final-prognosis">
-          <h3>Final Prognosis: {finalPrognosis}</h3>
+          <h3>Your Prognosis: {finalPrognosis}</h3>
           <p>Confidence: {prognoses.find((prog) => prog.prognosis === finalPrognosis)?.confidence}</p>
           <div className="form__prognosis-details">
             <p>
@@ -360,7 +360,7 @@ export default function SymptomsForm() {
           <h2>Prognoses</h2>
           {prognoses.map((prog) => (
             <div key={prog.prognosis} className="prognosis">
-              <h3>{prog.prognosis} <button className="form__confirm-button" onClick={() => handleConfirm(prog.prognosis)}>Confirm</button></h3>
+              <h3>{prog.prognosis} <button className="form__confirm-button" onClick={() => handleConfirm(prog.prognosis)}>Show More</button></h3>
               <p>Confidence: {prog.confidence}</p>
             </div>
           ))}
